@@ -1,0 +1,36 @@
+
+body{
+	
+	}
+.geral{
+	width:100%;
+	margin: 0 auto;
+	padding:0;
+	padding-bottom:10px;
+	background:#F2F2F2;
+	}
+.geral .header{
+	width:100%;
+	height:%;
+	background:#999;
+	}
+.geral .body{
+	width:950px;
+	margin:0 auto;
+	
+}
+.geral .body_post{
+	width:650px;
+	height:400px;
+	float:left;
+	margin-right:20px;
+	background:red;
+	
+}
+.geral .body_menu{
+	width:250px;
+	height:400px;
+	float:left;
+	background:pink;
+	
+}

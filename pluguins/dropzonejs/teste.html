@@ -1,0 +1,18 @@
+<form action="/file-upload" class="dropzone">
+  <div class="fallback">
+    <input name="file" type="file" multiple />
+  </div>
+</form>
+
+
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script src="dropzone.js"></script>
+
+<script>
+	var myDropzone = new Dropzone("div#myId", { url: "/file/post"});
+	// jQuery
+$("div#myId").dropzone({ url: "/file/post" });
+
+</script>
+
+
