@@ -2,7 +2,7 @@
 	echo "<tr>
 		<td>$cod_usua[$i]</td>
 		<td>$desc_usua[$i]</td>
-		<td>$cod_usua[$i]</td>
+		<td>$nom_usua[$i]</td>
 		<td>$cod_grpusuat[$i]</td>
 		<td>$emai_usua[$i]</td>
 		<td>$sta_usua[$i]</td>
