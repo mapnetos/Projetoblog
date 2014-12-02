@@ -56,7 +56,7 @@
 	
 	}
 	
-	function gravaUsuario($titulo_post,$descr_post,$tip_post,$cod_doc,$cod_bibl,$cod_usua,$dathor_post,$cod_cate,$sta_post,$reqconfi_post,$hierarq_post,$unic_post,$datexpir_post){
+	function gravaPost($titulo_post,$descr_post,$tip_post,$cod_doc,$cod_bibl,$cod_usua,$dathor_post,$cod_cate,$sta_post,$reqconfi_post,$hierarq_post,$unic_post,$datexpir_post){
 		require_once($_SERVER['DOCUMENT_ROOT']."/blog/classes/Post.class.php");
 		$post=new Post($titulo_post,$descr_post,$tip_post,$cod_doc,$cod_bibl,$cod_usua,$dathor_post,$cod_cate,$sta_post,$reqconfi_post,$hierarq_post,$unic_post,$datexpir_post);
 		

@@ -68,7 +68,7 @@
 							  <ul class="nav nav-tabs" role="tablist">
 								<li role="presentation" class="active"><a href="#Post" aria-controls="Post" role="tab" data-toggle="tab">Post</a></li>
 								<li role="presentation"><a href="#categoria" aria-controls="categoria" role="tab" data-toggle="tab">Categoria</a></li>
-								<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+								<li role="presentation"><a href="#usuario" aria-controls="usuario" role="tab" data-toggle="tab">Usuários</a></li>
 								<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
 							  </ul>
 
@@ -82,10 +82,19 @@
 									include($_SERVER['DOCUMENT_ROOT'].'/blog/funcoes/php/post_funcoes.php');
 									getTabelaPost();
 								?></div>
-								<div role="tabpanel" class="tab-pane" id="categoria"> <?php 
-								include($_SERVER['DOCUMENT_ROOT'].'/blog/funcoes/php/categoria_funcoes.php');
-										getTabelaCatg(); ?> </div>
-								<div role="tabpanel" class="tab-pane" id="messages"><?php include_once('form/form_cad_usua.php'); ?></div>
+								<div role="tabpanel" class="tab-pane" id="categoria"><!--- Categoria -->
+									<?php 
+										include($_SERVER['DOCUMENT_ROOT'].'/blog/funcoes/php/categoria_funcoes.php');
+										getTabelaCatg(); 
+									?> 
+								</div><!---Categoria -->
+								
+								<div role="tabpanel" class="tab-pane" id="usuario">
+									<?php 
+										include($_SERVER['DOCUMENT_ROOT'].'/blog/funcoes/php/usuario_funcoes.php');
+										getTabelaUsuario(); 
+									?>
+								</div>
 								<div role="tabpanel" class="tab-pane" id="settings"><?php include_once('form/form_cad_sis.php'); ?> </div>
 							  </div>
 
