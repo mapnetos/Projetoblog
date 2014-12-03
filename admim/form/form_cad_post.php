@@ -6,7 +6,7 @@
 			</div>
 			<div class="panel-body">
 				<div class="cadUsua" >
-					<form action="../funcoes/php/post.php" class=""  method="POST">
+					<form action="../funcoes/php/post.php" class=""  method="POST" enctype="multipart/form-data">
 						<label class="campos" style="width:100%;">Título
 							<input type="text" class="TituloPost form-control" placeholder="Título do post" name="tituloPost">
 						</label><br>
@@ -50,19 +50,22 @@
 							</select>
 						</label>
 						<br>
-						<label class="unicPost campos" style="width:5%; font-size:9pt;" title="unico p essa categoria, marcando essa opc desativará todos os postes dessa categoria exeto este">P.Único							
+						<label class="reqconfiPost campos" style="float:left;" title="exigir confirmação">URL do video
+							<input type="text" class="TituloPost form-control" placeholder="Título do post" name="tituloPost">
+						</label><br>
+						<label class="unicPost campos" style="width:5%; font-size:9pt;  float:left; margin-left:15px;" title="unico p essa categoria, marcando essa opc desativará todos os postes dessa categoria exeto este">P.Único							
 							<input type="checkbox" class="boot-switch" id="checkboxSuccess" value="1" name="unicPost">
 						</label>
-						<label class="staPost campos" style="width:5%; font-size:9pt; margin:30px;">Desativar
+						<label class="staPost campos" style="width:5%; font-size:9pt; float:left;  margin-left:15px;">Desativar
 							<input type="checkbox" class="boot-switch" id="checkboxSuccess" value="1" name="staPost" CHECKED>
 						</label>
-						<label class="reqconfiPost campos" style="width:5%" title="exigir confirmação">comfirma
+						<label class="reqconfiPost campos" style="width:5% ;float:left; margin-left:25px" title="exigir confirmação">comfirma
 							<input type="checkbox" class="boot-switch" id="checkboxSuccess" value="1" name="reqconfiPost">
 						</label>
 						<br>
 						
 						<label class="campos"> Upload da imagem
-							<input type="file" id="imgUsua" name="imgUsua">
+							<input type="file" id="imgPost" name="imgPost">
 								<p class="help-block" style="font-size:11pt;"> Faça Upload da imagem, tamanhao max 500Mb</p>
 							</label>
 							<br>
