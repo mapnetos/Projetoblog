@@ -2,7 +2,7 @@
 require_once("post_funcoes.php");
 	
 	$tituloPost		 =isset($_POST['tituloPost'])?$_POST['tituloPost']:'ttt'; echo $tituloPost;
-    /*$descrPost		 =$_POST['descrPost'];
+    /*$descrPost		 =$_POST['descrPost'];  -------
     $tipPost		 =$_POST['tipPost'];
     $codDoc			 =$_POST['codDoc'];
     $codBibl		 =$_POST['codBibl']='';
