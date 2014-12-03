@@ -68,7 +68,7 @@
 							<br>
 							<span style="float:right;">
 								<button type="button" class="cancelar btn btn-default" data-dismiss="modal">Cancelar</button>
-								<button type="submit" class="gravUsua btn btn-success" >Gravar</button>
+								<button type="submit" class="gravPost btn btn-success" >Gravar</button>
 							</span>
 					</form>
 				</div>
