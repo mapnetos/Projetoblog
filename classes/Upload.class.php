@@ -1,5 +1,5 @@
 ﻿<?php 
-$url = $_SERVER["PHP_SELF"];
+//$url = $_SERVER["PHP_SELF"];
 /*if(preg_match("class.Upload.php", "$url")){
 	 header("Location: ../index.php");
 }*/
@@ -11,6 +11,7 @@ class Upload {
 	var $tamanho;
 	var $tipoPermitido = array(".gif",".jpg","jpeg","png");
 	var $tamanhoPermitido = 1048576;// valor em byt
+	var $localNome;
 	
 	function setTipo($tipo){ // seta o tipo / extenção caso seja valido adiciona
 		for($i=0;$i<=count($this->tipoPermitido);$i++){
@@ -58,15 +59,16 @@ class Upload {
 	}
 	function salvarArquivo($arquivo,$pasta){
 		move_uploaded_file($arquivo['tmp_name'], $pasta ."/" . $this->nome);
+		$this->localNome=$pasta ."/" . $this->nome;
 		return true;
 	}
-	function UploadArquivo($arquivo, $pasta, $tipos){ 
+	function uploadArquivo($arquivo, $pasta, $tipos){ 
 		if(isset($arquivo) and !empty($arquivo)){
 			if($this->setTipo(strrchr($arquivo['name'],'.'))){
 				if($this->setTamanho($arquivo["size"])){
 					$nome=$this->setNome( $this->encriptar(array($arquivo["name"],date("dmYHis"))));
 					$salva=$this->salvarArquivo($arquivo,$pasta);
-					return true;
+					return $this->localNome;
 				}else{
 					return "tamanho não é permitido";
 				}

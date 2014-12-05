@@ -19,26 +19,27 @@
 							  <option>informativo</option>
 							  <option>Alerta</option>
 							  <option>Comunicado</option>
-							  <option>outros</option>
+							  <option>outros</option> 
 							  <option>...</option>
 							</select>
 						</label>
 						<label class="tipPost campos" style="width:;" name=""> Tipo de Ilustração
 							<select class="form-control" name="tipPost">
-							  <option>Sem ilustração</option>
-							  <option>Ilustrar com imagem</option>
-							  <option>Ilustrar com vídeo</option>
-							  <option>Com galegia de imagem</option>
-							  <option>...</option>
+							  <option value="1">Sem ilustração</option>
+							  <option value="2">Ilustrar com imagem</option>
+							  <option value="3">Ilustrar com vídeo</option>
+							  <option value="4">Com galegia de imagem</option>
+							  <option value="5">...</option>
 							</select>
 						</label>
 						<label class="codDoc campos" style="width:;" name=""> Opçõe ilustrções <!--- caso ele seleciona a imagem não precisa enviar o upload  --->
 							<select class="form-control" name="codDoc">
-							  <option>imagem de teste</option>
-							  <option>testando imagem</option>
-							  <option>a testar</option>
-							  <option>outro teste</option>
-							  <option>...</option>
+							<option ></option>
+							  <option value="1">imagem de teste</option>
+							  <option value="2">testando imagem</option>
+							  <option value="2">a testar</option>
+							  <option value="4">outro teste</option>
+							  <option value="5">...</option>
 							</select>
 						</label>
 						<label class="hierarqPost campos" style="width:;" name=""> Grau de hierarquia
@@ -51,8 +52,12 @@
 						</label>
 						<br>
 						<label class="reqconfiPost campos" style="float:left;" title="exigir confirmação">URL do video
-							<input type="text" class="TituloPost form-control" placeholder="Título do post" name="tituloPost">
-						</label><br>
+							<input type="text" class="urlVideo form-control" placeholder="http://www.lovaldovideo..." name="urlVideo">
+						</label>
+						<label class="reqconfiPost campos" style="float:left; margin-left:10px;" title="exigir confirmação" disabled>Data de Expiraração
+							<input type="date" class="datexpirPost form-control" placeholder="DD/MM/AAAA" name="datexpirPost">
+						</label>
+						<br>
 						<label class="unicPost campos" style="width:5%; font-size:9pt;  float:left; margin-left:15px;" title="unico p essa categoria, marcando essa opc desativará todos os postes dessa categoria exeto este">P.Único							
 							<input type="checkbox" class="boot-switch" id="checkboxSuccess" value="1" name="unicPost">
 						</label>

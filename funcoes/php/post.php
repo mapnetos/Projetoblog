@@ -34,23 +34,26 @@ require_once("post_funcoes.php");
 	  echo '<br>titulo'.$_POST['imgPost'];
 	  */
 	//gravaPost($_POST['tituloPost'],$_POST['descrPost'],$_POST['tipPost'],$cod_doc,$cod_bibl,$cod_usua,$dathor_post,$cod_cate,$sta_post,$reqconfi_post,$hierarq_post,$unic_post,$datexpir_post);
-	
+	//echo $tipPost;
 	if($tipPost==1){ // 1- Sem imagem . 2-imagem  3-video 4-galeria
-		$imgPost='';
+		//$imgPost='';
 		$codDoc='';
 		$codBibl='';
 		$urlVideo='';
 	}else if($tipPost==2 && !empty($codDoc)){
-		$imgPost='';
+		//$imgPost='';
 		//$codDoc=''; este foi selecionado
 		$codBibl='';
 		$urlVideo='';
 		
-	}else if(($tipPost && $tipPost==2) && (isset($imgPost) && !empty($imgPost))){
+	}else if(($tipPost==2) /*&& (isset($imgPost) && !empty($imgPost))*/){
 		//$imgPost='';este foi selecionado
 		$codDoc='';
 		$codBibl='';
 		$urlVideo='';
+		include('../../classes/Upload.class.php');
+		$img =new Upload();
+	    echo $img->uploadArquivo($_FILES['imgPost'],'C:\wamp\www\blog\documentos\imagens','');
 	}else if(($tipPost && $tipPost==3) && (isset($codDoc) && !empty($codDoc))){
 		$imgPost='';
 		//$codDoc=''; este foi selecionado
