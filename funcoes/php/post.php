@@ -15,7 +15,7 @@ require_once("post_funcoes.php");
     $hierarqPost	 =isset($_POST['hierarqPost'])?$_POST['hierarqPost']:"";
     $unicPost	 	 =isset($_POST['unicPost'])?$_POST['unicPost']:"";
     $datexpirPost	 =isset($_POST['datexpirPost'])?$_POST['datexpirPost']:"";
-    $imgPost	 	 =isset($_POST['imgPost'])?$_POST['imgPost']:"";
+    $imgPost	 	 =isset($_FILES['imgPost'])?$_FILES['imgPost']:"";
 	 /* //----------------------------------
       echo '<br>titulo'.$_POST['tituloPost'];
 	  echo '<br>titulo'.$_POST['descrPost'];
@@ -53,7 +53,7 @@ require_once("post_funcoes.php");
 		$urlVideo='';
 		include('../../classes/Upload.class.php');
 		$img =new Upload();
-	    echo $img->uploadArquivo($_FILES['imgPost'],'C:\wamp\www\blog\documentos\imagens','');
+	    echo "<img src=".$img->uploadArquivo($imgPost,'C:\wamp\www\blog\documentos\imagens','').">";
 	}else if(($tipPost && $tipPost==3) && (isset($codDoc) && !empty($codDoc))){
 		$imgPost='';
 		//$codDoc=''; este foi selecionado
