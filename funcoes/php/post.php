@@ -47,13 +47,18 @@ require_once("post_funcoes.php");
 		$urlVideo='';
 		
 	}else if(($tipPost==2) /*&& (isset($imgPost) && !empty($imgPost))*/){
+		require_once("upload_img.php");
 		//$imgPost='';este foi selecionado
 		$codDoc='';
 		$codBibl='';
 		$urlVideo='';
-		include('../../classes/Upload.class.php');
-		$img =new Upload();
-	    echo "<img src=".$img->uploadArquivo($imgPost,'C:\wamp\www\blog\documentos\imagens','').">";
+		uploadImg($imgPost);
+		
+		/*include('../../classes/Upload.class.php');                           /
+		$img =new Upload();                                                    /
+	   $img->uploadArquivo($imgPost,'C:\wamp\www\blog\documentos\imagens','');*/
+		//($desc_doc='',$datcria_doc='',$datup_doc='',$tam_doc='',$local_doc='',$estenc_doc='',$cod_usua='',$qtddow_doc,$icon_doc='')
+		//echo $img;
 	}else if(($tipPost && $tipPost==3) && (isset($codDoc) && !empty($codDoc))){
 		$imgPost='';
 		//$codDoc=''; este foi selecionado

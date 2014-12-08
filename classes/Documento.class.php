@@ -11,63 +11,63 @@ class Documento{
 	var $qtddow_doc;
 	var $icon_doc;
 	
-	function __construct($desc_doc='',$datcria_doc='',$datup_doc='',$tam_doc='',$local_doc='',$estenc_doc='',$cod_usua='',$qtddow_doc,$icon_doc=''){
-		$this->setDesc_doc($desc_doc);
-		$this->setDatcria_doc($datcria_doc);
-		$this->setDatup_doc($datup_doc);
-		$this->setDatup_doc($datup_doc);
-		$this->setTam_doc($tam_doc);
-		$this->setLocal_doc($local_doc);
-		$this->setEstenc_doc($estenc_doc);
-		$this->setCod_usua($cod_usua);
-		$this->setQtddow_doc($qtddow_doc);
-		$this->setIcon_doc($setIcon_doc);
+	function __construct($desc_doc='',$datcria_doc='',$datup_doc='',$tam_doc='',$local_doc='',$estenc_doc='',$cod_usua='',$qtddow_doc='',$icon_doc=''){
+		$this->setDescDoc($desc_doc);
+		$this->setDatcriaDoc($datcria_doc);
+		$this->setDatupDoc($datup_doc);
+		$this->setTamDoc($tam_doc);
+		$this->setLocalDoc($local_doc);
+		$this->setEstencDoc($estenc_doc);
+		$this->setCodUsua($cod_usua);
+		$this->setQtddowDoc($qtddow_doc);
+		$this->setIconDoc($icon_doc);
 		
 	}
-	function setCod_doc($cod_doc){
+	function setCodDoc($cod_doc){
 		if($cod_doc > 0){
-			$this->cod_doc =$cod_doc;
+			$this->codDoc =$cod_doc;
 		}
 	}
-	function setDesc_doc($desc_doc){
+	function setDescDoc($desc_doc){
 		if(!empty($desc_doc)){
 			$this->desc_doc=$desc_doc; 
 		}
 	}
-	function setDatcria_doc($datcria_doc){
+	function setDatcriaDoc($datcria_doc){
 		if(!empty($datcria_doc)){
 			$this->datcria_doc=$datcria_doc;
 	}
-	function setDatup_doc($datup_doc){
+	function setDatupDoc($datup_doc){
 	// será criada por uma classe
+		$this->datupDoc=$datup_doc;
 	}
 	
-	function setTam_doc($tam_doc){
+	function setTamDoc($tam_doc){
 		if(!empty($tam_doc) && $tam_doc>0){
 			$this->tam_doc=$tam_doc;
 		}
 	}
-	function setLocal_doc($local_doc){
+	function setLocalDoc($local_doc){
 		if(!empty($local_doc)){
 			$this->local_doc=$local_doc;
 		}
 	}
-	function setEstenc_doc($estenc_doc){
+	function setEstencDoc($estenc_doc){
 		if(!empty($estenc_doc)){
 			$this->estenc_doc=$estenc_doc;
 		}
 	}
-	function setCod_usua($cod_usua){
+	function setCodUsua($cod_usua){
 		if(!empty($cod_usua) && $cod_usua>0){
 			$this->cod_usua=$cod_usua;
 		}
 	}
-	function setQtddow_doc($qtddow_doc){
+	function setQtddowDoc($qtddow_doc){
 		if(!empty($qtddow_doc) && $qtddow_doc>0){
 			$this->qtddow_doc=$qtddow_doc;
 		}
 	}
-	function setIcon_doc($setIcon_doc){
+	function setIconDoc($setIcon_doc){
 		if(!empty($setIcon_doc)){
 			$this->setIcon_doc=$setIcon_doc;
 		}
@@ -178,7 +178,7 @@ class Documento{
 		}
 	}	
 	
-	function verificaObrigatorio(){// verifica os campos obrigatórios desta classe
+	/*function verificaObrigatorio(){// verifica os campos obrigatórios desta classe
 		$verifica = array($this->desc_usua,$this->nom_usua,$this->senha_usua,$this->cod_grpusua,$this->dathrcad_usua,$this->emai_usua);
 			for($i=0;$i<count($verifica);$i++){
 				if(empty($verifica[$i]) || $verifica[$i]==''){
@@ -187,5 +187,5 @@ class Documento{
 				}
 			}
 		
-	}
+	}*/
 }
